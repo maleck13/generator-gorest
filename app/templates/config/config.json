@@ -1,0 +1,12 @@
+{
+  "example":"value",
+  "pprof_enabled":false <% if(database == 'mongo'){ %>,
+  "database":{
+    "addrs":["localhost:27017"],
+    "timeout":0,
+    "database":"admin",
+    "username":"admin",
+    "password":"pass"
+  }
+<% } %>
+}

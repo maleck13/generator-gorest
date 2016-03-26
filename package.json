@@ -1,0 +1,27 @@
+{
+  "name": "generator-gorest",
+  "version": "1.0.0",
+  "description": "yeoman generator for creating a ready rest api. gorilla mux for routing, logrus for logging , negroni for middleware",
+  "main": "index.js",
+  "keywords": [
+    "yeoman-generator",
+    "go",
+    "golang",
+    "rest",
+    "api"
+  ],
+  "dependencies": {
+    "URIjs": "~1.11.2",
+    "asciify": "~1.3.3",
+    "lodash": "~2.4.1",
+    "mkdirp": "^0.5.1",
+    "pluralize": "~0.0.6",
+    "underscore.string": "~2.3.3",
+    "yeoman-generator": "~0.21.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
