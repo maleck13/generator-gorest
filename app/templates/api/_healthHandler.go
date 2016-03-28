@@ -4,9 +4,10 @@ import (
 	"net/http"
 	"encoding/json"
 )
-
+//handler to add health checks to.
 func HealthHandler(rw http.ResponseWriter, req *http.Request) HttpError {
 	//fill in health checks here
+	//TODO add a mongo health check
 	return nil
 }
 

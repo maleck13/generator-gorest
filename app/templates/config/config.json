@@ -7,6 +7,15 @@
     "database":"admin",
     "username":"admin",
     "password":"pass"
-  }
-<% } %>
+  } <% if(messaging == 'yes'){ %>,<% } %>
+<% } %><% if(messaging == 'yes'){ %>
+"stomp":{
+"host":"localhost",
+"port":"61613",
+"protocol":"1.1",
+"user":"guest",
+"pass":"guest",
+"vhost":"localhost"
+}
+ <% } %>
 }

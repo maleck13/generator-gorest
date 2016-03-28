@@ -11,6 +11,8 @@ import (
 	"testing"
 )
 
+//todo add tests for other index methods
+
 func TestIndexRoute(t *testing.T) {
 	config.SetGlobalConfig("../config/config.json")
 	server := httptest.NewServer(api.NewRouter())

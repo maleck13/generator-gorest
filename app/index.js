@@ -61,15 +61,15 @@ module.exports = generators.Base.extend({
       },
         {
           type: 'input',
-          name: 'amqp',
-          message: 'Do you want to include an amqp boilerplate. [no]',
+          name: 'stomp',
+          message: 'Do you want to include an stomp messaging boilerplate (yes/no). [no]',
           store   : true,
           default: "no"
         },
         {
           type: 'input',
           name: 'database',
-          message: 'Do you want to include a database boilerplate. Choices: mongo,mysql,no [no]',
+          message: 'Do you want to include a database boilerplate. (mongo/no) [no]',
           store   : true,
           default: "no"
         }];
@@ -79,6 +79,7 @@ module.exports = generators.Base.extend({
         this.basePackage = props.basePackage;
         this.metrics = props.prometheus;
         this.database = props.database;
+        this.stomp = props.stomp;
 
         done();
       }.bind(this));
@@ -92,6 +93,7 @@ module.exports = generators.Base.extend({
       var configDir = "config/";
       var apiDir = "api/";
       var apiMW = "api/middleware";
+      var domainDir = "domain/";
 
       this.copy('gitignore', '.gitignore');
 
@@ -99,12 +101,14 @@ module.exports = generators.Base.extend({
       mkdir(configDir);
       mkdir(apiDir);
       mkdir(apiMW);
+      mkdir(domainDir);
 
       var commonTemplateVals = {
         basePackage: this.basePackage,
         baseName: this.baseName,
         database: this.database,
-        metrics: this.metrics
+        metrics: this.metrics,
+        messaging: this.stomp
       };
       this.fs.copyTpl(
         this.templatePath('_main.go'),
@@ -129,13 +133,47 @@ module.exports = generators.Base.extend({
       );
 
       if("no" !== database){
-        mkdir("data/")
+        mkdir("data/");
+        mkdir("data/model");
       }
 
       if("mongo" == database){
         this.fs.copyTpl(
           this.templatePath('data/_database_mongo.go'),
           this.destinationPath('data/mongo.go'),
+          commonTemplateVals
+        );
+
+        this.fs.copyTpl(
+          this.templatePath('data/model/_example.go'),
+          this.destinationPath('data/model/example.go'),
+          commonTemplateVals
+        );
+
+        this.fs.copyTpl(
+          this.templatePath('data/model/_example.go'),
+          this.destinationPath('data/model/example.go'),
+          commonTemplateVals
+        );
+
+        this.fs.copyTpl(
+          this.templatePath('domain/_exampleService.go'),
+          this.destinationPath('domain/exampleService.go'),
+          commonTemplateVals
+        );
+
+        this.fs.copyTpl(
+          this.templatePath('domain/_exampleService_test.go'),
+          this.destinationPath('domain/exampleService_test.go'),
+          commonTemplateVals
+        );
+
+      }
+
+      if("yes" == this.stomp){
+        this.fs.copyTpl(
+          this.templatePath('data/_stomp.go'),
+          this.destinationPath('data/stomp.go'),
           commonTemplateVals
         );
       }

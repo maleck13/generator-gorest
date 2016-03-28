@@ -17,6 +17,9 @@ type Configuration interface {
 	<% if(database == 'mongo'){ %>
 	 GetDatabase() *mgo.DialInfo
         <% } %>
+	<% if(messaging == 'yes'){ %>
+          GetStomp()*Stomp_config
+	<% } %>
 
 }
 
@@ -26,6 +29,19 @@ type config struct {
 	<% if(database == 'mongo'){ %>
         Database *mgo.DialInfo `json:"database"`
 	<% } %>
+	<% if(messaging == 'yes'){ %>
+	Stomp *Stomp_config `json:"stomp"`
+	<% } %>
+}
+
+type Stomp_config struct {
+Host string `json:"host"`
+Port string  `json:"port"`
+Protocol string `json:"protocol"`
+User string `json:"user"`
+Pass string `json:"pass"`
+Vhost string `json:"vhost"`
+
 }
 
 func (c *config) GetExample()string{
@@ -38,6 +54,13 @@ func (c *config) GetPProfEnabled() bool {
 <% if(database == 'mongo'){ %>
 func (c *config) GetDatabase() *mgo.DialInfo {
 	return c.Database
+}
+<% } %>
+
+
+<% if(messaging == 'yes'){ %>
+func( c *config) GetStomp()*Stomp_config{
+   return c.Stomp
 }
 <% } %>
 

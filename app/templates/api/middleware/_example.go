@@ -5,7 +5,18 @@ import (
 	"net/http"
 )
 
+type ReqLog struct {
+	Method string
+	Url string
+
+}
+//example middle ware that logs incoming requests
 func ExampleMiddleware(rw http.ResponseWriter, req *http.Request, next http.HandlerFunc){
-	logrus.Info("example middleware")
+
+	logrus.Info("request: ", &ReqLog{
+		req.Method,
+		req.URL.Path,
+	})
 	next(rw,req)
+
 }

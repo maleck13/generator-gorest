@@ -25,10 +25,22 @@ func NewRouter() http.Handler {
 
 	<% if("yes" === metrics) { %>
         apiRouter.HandleFunc("/", prometheus.InstrumentHandlerFunc("/api/",RouteErrorHandler(IndexHandler))).Methods("GET")
+	<% if("mongo" === database) { %>
+	apiRouter.HandleFunc("/mongo", prometheus.InstrumentHandlerFunc("/api/mongo",RouteErrorHandler(IndexMongo))).Methods("POST")
+	<% } %>
+	<% if("yes" == messaging) { %>
+	apiRouter.HandleFunc("/stomp",prometheus.InstrumentHandlerFunc("/api/stomp",RouteErrorHandler(IndexStomp))).Methods("GET","POST")
+	<% } %>
         r.Handle("/metrics",prometheus.Handler())
 	<% }else{ %>
 
         apiRouter.HandleFunc("/", RouteErrorHandler(IndexHandler)).Methods("GET")
+	<% if("mongo" === database) { %>
+	apiRouter.HandleFunc("/mongo", RouteErrorHandler(IndexMongo)).Methods("POST")
+	<% } %>
+	<% if("yes" == messaging) { %>
+	apiRouter.HandleFunc("/stomp",RouteErrorHandler(IndexStomp)).Methods("GET","POST")
+	<% } %>
 
         <% } %>
 

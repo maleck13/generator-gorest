@@ -42,6 +42,11 @@ func serve(context *cli.Context) {
 	config.SetGlobalConfig(configPath)
 	<% if(database == 'mongo'){ %>
 	data.InitMongo()
+        defer data.DestroyMongo()
+	<% } %>
+        <% if(messaging == 'yes'){ %>
+	data.InitStomp(config.Conf.GetStomp())
+	defer data.DestroyStomp()
 	<% } %>
 	router := api.NewRouter()
 	if config.Conf.GetPProfEnabled() {

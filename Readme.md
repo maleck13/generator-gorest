@@ -14,7 +14,8 @@ optional
 
 there are options for database support
 
-mongo mgo
+mongo vai mgo
+
 mysql 
 
 
@@ -36,3 +37,9 @@ install yeoman
  ./appname serve
  
  ```
+
+
+## TODO 
+
+- add a dockerfile
+- add a docker-compose file

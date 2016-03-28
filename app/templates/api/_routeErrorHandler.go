@@ -13,7 +13,8 @@ func RouteErrorHandler(handler HttpHandler) http.HandlerFunc {
 		encoder := json.NewEncoder(wr)
 		//may change to use a context object containing other data
 		if err := handler(wr, req); err != nil {
-			logrus.Error("handler error: ", err)
+			//todo make this better
+			logrus.Error("handler error: ", err , " " + err.ErrorContext() , " path: " + req.URL.Path, " method: " + req.Method)
 			wr.WriteHeader(err.HttpErrorCode())
 			encoder.Encode(err)
 			return
