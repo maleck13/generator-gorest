@@ -1,0 +1,44 @@
+<% if('mongo' == database ){ %>
+mongo:
+  restart: always
+  image: tutum/mongodb
+  volumes:
+    - /data/db:/opt/db
+  ports:
+    - "27017:27017"
+  environment:
+    - MONGODB_DATABASE=mydatabase
+    - MONGODB_USER=user
+    - MONGODB_PASS=mypass
+  command: mongod --smallfiles
+  <% } %>
+<%=baseName %>:
+  restart: always
+  image: <%=baseName %>
+  ports:
+    - "3000:3000"
+  environment:
+    - MONGODB_DATABASE=mydatabase
+    - MONGODB_USER=user
+    - MONGODB_PASS=mypass
+    - MESSAGING_LOGIN=admin
+    - MESSAGING_PASSWORD=admin
+  links:
+  <% if('mongo' == database ){ %>
+    - mongo
+  <% } %>
+  <% if('yes' == messaging) { %>
+    - activemq
+  <% } %>
+<% if('yes' == messaging) { %>
+activemq:
+  restart: always
+  image: webcenter/activemq
+  ports:
+    - "61613:61613"
+  environment:
+    - ACTIVEMQ_ADMIN_LOGIN=admin
+    - ACTIVEMQ_ADMIN_PASSWORD=admin
+<% } %>
+
+

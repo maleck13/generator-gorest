@@ -16,7 +16,7 @@ there are options for database support
 
 mongo vai mgo
 
-mysql 
+thre are also options for messaging via stomp
 
 
 ## usage

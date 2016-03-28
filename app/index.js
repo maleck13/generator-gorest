@@ -201,6 +201,20 @@ module.exports = generators.Base.extend({
         commonTemplateVals
       );
 
+
+      //docker
+      this.fs.copyTpl(
+        this.templatePath('Dockerfile'),
+        this.destinationPath('Dockerfile'),
+        commonTemplateVals
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('docker-compose.yml'),
+        this.destinationPath('docker-compose.yml'),
+        commonTemplateVals
+      );
+
       this.template('api/_errors.go', 'api/errors.go');
       this.template('api/_healthHandler.go', 'api/healthHandler.go');
       this.template('api/middleware/_example.go','api/middleware/example.go');
