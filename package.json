@@ -1,7 +1,7 @@
 {
   "name": "generator-gorest",
   "version": "1.1.0",
-  "description": "yeoman generator for creating a ready rest api. gorilla mux for routing, logrus for logging , negroni for middleware",
+  "description": "yeoman generator for creating a ready rest api. gorilla mux for routing, logrus for logging , negroni for middleware. Comes with options for mongodb and stomp for messaging",
   "main": "index.js",
   "keywords": [
     "yeoman-generator",

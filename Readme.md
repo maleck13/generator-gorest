@@ -11,14 +11,7 @@ optional
 
 - prometheus for metrics
 - mongo
-
-there are options for database support
-
-mongo vai mgo
-
-thre are also options for messaging via stomp
-
-
+- stomp (messaging)
 ## usage
 
 install yeoman
@@ -33,13 +26,12 @@ install yeoman
  cd $GOPATH/src/github.com/<user>/<appname>
  yo gorest
  go get .
- go build .
- ./appname serve
- 
+ (optional) go get github.com/tools/godep
+ (optional) godep save -r ./... 
+  docker build -t <appname> .
+  docker-compose up -d
+  
+  curl http://<dockermachineip>:3000/sys/info/ping
+  
  ```
 
-
-## TODO 
-
-- add a dockerfile
-- add a docker-compose file

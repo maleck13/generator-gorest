@@ -215,6 +215,7 @@ module.exports = generators.Base.extend({
         commonTemplateVals
       );
 
+      this.template('domain/Readme.md', 'domain/Readme.md');
       this.template('api/_errors.go', 'api/errors.go');
       this.template('api/_healthHandler.go', 'api/healthHandler.go');
       this.template('api/middleware/_example.go','api/middleware/example.go');

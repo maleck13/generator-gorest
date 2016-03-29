@@ -2,20 +2,20 @@
   "example":"value",
   "pprof_enabled":false <% if(database == 'mongo'){ %>,
   "database":{
-    "addrs":["localhost:27017"],
+    "addrs":["mongo:27017"],
     "timeout":0,
-    "database":"admin",
-    "username":"admin",
-    "password":"pass"
-  } <% if(messaging == 'yes'){ %>,<% } %>
-<% } %><% if(messaging == 'yes'){ %>
-"stomp":{
-"host":"localhost",
-"port":"61613",
-"protocol":"1.1",
-"user":"guest",
-"pass":"guest",
-"vhost":"localhost"
-}
+    "database":"mydatabase",
+    "username":"user",
+    "password":"mypass"
+  } <% } %> <% if(messaging == 'yes'){ %>,<% } %>
+<% if(messaging == 'yes'){ %>
+  "stomp":{
+    "host":"activemq",
+    "port":"61613",
+    "protocol":"1.1",
+    "user":"admin",
+    "pass":"admin",
+    "vhost":"localhost"
+  }
  <% } %>
 }

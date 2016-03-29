@@ -14,9 +14,19 @@ type HttpHandler func(wr http.ResponseWriter, req *http.Request) HttpError
 
 func NewRouter() http.Handler {
 	r := mux.NewRouter().StrictSlash(true)
+	//dedicated sub route for /api which will use the PathPrefix
+	apiRouter := mux.NewRouter().PathPrefix("/api").Subrouter().StrictSlash(true)
 
-	//dedicated to /api which will use the PathPrefix
-	apiRouter := mux.NewRouter().PathPrefix("/api").Subrouter().StrictSlash(false)
+	//recovery middleware for any panics in the handlers
+	recovery := negroni.NewRecovery()
+	recovery.PrintStack = false
+	//add middleware for all routes
+	n := negroni.New(recovery)
+	//add some top level routes
+	r.Handle("/metrics",prometheus.Handler())
+	r.HandleFunc("/sys/info/health",RouteErrorHandler(HealthHandler))
+	r.HandleFunc("/sys/info/ping",RouteErrorHandler(Ping))
+
 
 	r.PathPrefix("/api").Handler(negroni.New(
 		negroni.HandlerFunc(middleware.ExampleMiddleware),
@@ -43,11 +53,10 @@ func NewRouter() http.Handler {
 	<% } %>
 
         <% } %>
+	//wire up middleware and router
+	n.UseHandler(r)
 
-	r.HandleFunc("/health",RouteErrorHandler(HealthHandler))
-	r.HandleFunc("/ping",RouteErrorHandler(Ping))
-
-	return r
+	return n  //negroni implements the http.Handler interface
 }
 
 

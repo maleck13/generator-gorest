@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09f0e0ca-6e64-4ec4-bf73-762834d0f46d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/Dockerfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/docker-compose.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.js" afterPath="$PROJECT_DIR$/app/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/api/_indexHandler.go" afterPath="$PROJECT_DIR$/app/templates/api/_indexHandler.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/api/_router.go" afterPath="$PROJECT_DIR$/app/templates/api/_router.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/api/middleware/_example.go" afterPath="$PROJECT_DIR$/app/templates/api/middleware/_example.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/cmd/_server.go" afterPath="$PROJECT_DIR$/app/templates/cmd/_server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/config/config.json" afterPath="$PROJECT_DIR$/app/templates/config/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/docker-compose.yml" afterPath="$PROJECT_DIR$/app/templates/docker-compose.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="generator-gorest.iws" />
@@ -29,13 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17626321">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
+      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor vertical-scroll-proportion="0.6218593">
+                <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
+          </provider>
+          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -63,27 +73,27 @@
         <option value="$PROJECT_DIR$/app/templates/_main.go" />
         <option value="$PROJECT_DIR$/app/templates/data/_database.go" />
         <option value="$PROJECT_DIR$/app/templates/data/_amqp.go" />
-        <option value="$PROJECT_DIR$/app/templates/api/middleware/_example.go" />
         <option value="$PROJECT_DIR$/app/templates/api/_errors.go" />
         <option value="$PROJECT_DIR$/app/templates/api/_healthHandler.go" />
         <option value="$PROJECT_DIR$/app/templates/api/_indexHandler_test.go" />
         <option value="$PROJECT_DIR$/app/templates/api/_routeErrorHandler.go" />
         <option value="$PROJECT_DIR$/app/templates/data/_stomp.go" />
-        <option value="$PROJECT_DIR$/app/templates/cmd/_server.go" />
         <option value="$PROJECT_DIR$/app/templates/data/model/_example.go" />
         <option value="$PROJECT_DIR$/app/templates/domain/_exampleService.go" />
         <option value="$PROJECT_DIR$/app/templates/domain/_exampleService_test.go" />
         <option value="$PROJECT_DIR$/app/templates/domain/Readme.md" />
-        <option value="$PROJECT_DIR$/app/templates/api/_indexHandler.go" />
         <option value="$PROJECT_DIR$/app/templates/data/_database_mongo.go" />
-        <option value="$PROJECT_DIR$/app/templates/api/_router.go" />
         <option value="$PROJECT_DIR$/app/templates/config/_config.go" />
+        <option value="$PROJECT_DIR$/app/templates/Dockerfile" />
+        <option value="$PROJECT_DIR$/app/templates/api/_router.go" />
+        <option value="$PROJECT_DIR$/app/templates/cmd/_server.go" />
+        <option value="$PROJECT_DIR$/app/templates/api/middleware/_example.go" />
+        <option value="$PROJECT_DIR$/app/templates/api/_indexHandler.go" />
         <option value="$PROJECT_DIR$/app/templates/config/config.json" />
-        <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/index.js" />
         <option value="$PROJECT_DIR$/app/templates/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/app/templates/Dockerfile" />
+        <option value="$PROJECT_DIR$/Readme.md" />
       </list>
     </option>
   </component>
@@ -192,7 +202,121 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator-gorest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="middleware" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -556,12 +680,12 @@
       <created>1458985025809</created>
       <option name="number" value="Default" />
       <updated>1458985025809</updated>
-      <workItem from="1458985026964" duration="20260000" />
+      <workItem from="1458985026964" duration="24473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20260000" />
+    <option name="totallyTimeSpent" value="24473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -667,16 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/cmd/_server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59951454">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="37" />
-          <folding>
-            <marker date="1459196154000" expanded="true" signature="20:171" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/data/model/_example.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0934466">
@@ -721,19 +835,6 @@
       </provider>
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/api/middleware/_example.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34587377">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1459195292000" expanded="false" signature="27:72" placeholder="..." />
-            <marker date="1459195292000" expanded="true" signature="93:124" placeholder="{...}" />
-            <marker date="1459195292000" expanded="true" signature="263:351" placeholder="{...}" />
-            <marker date="1459195292000" expanded="true" signature="299:333" placeholder="{...}" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/domain/_exampleService.go">
@@ -784,18 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/api/_indexHandler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018203884">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="41" />
-          <folding>
-            <marker date="1459197426000" expanded="true" signature="20:93" placeholder="..." />
-            <marker date="1459197426000" expanded="true" signature="708:939" placeholder="/.../" />
-            <marker date="1459197426000" expanded="true" signature="1612:1689" placeholder="/.../" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/data/_database_mongo.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1092233">
@@ -818,12 +907,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/api/_indexHandler_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.091019414">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <marker date="1459195605000" expanded="true" signature="25:223" placeholder="..." />
+            <marker date="1459195605000" expanded="true" signature="301:992" placeholder="{...}" />
+            <marker date="1459195605000" expanded="true" signature="853:916" placeholder="{...}" />
+            <marker date="1459195605000" expanded="true" signature="922:989" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/api/_router.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7645631">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        <state vertical-scroll-proportion="1.0558252">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
           <folding>
-            <marker date="1459197865000" expanded="true" signature="20:144" placeholder="..." />
+            <marker date="1459281898000" expanded="true" signature="20:144" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -838,98 +940,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/cmd/_server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14563107">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding>
+            <marker date="1459283909000" expanded="true" signature="20:171" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/api/middleware/_example.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.091019414">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <marker date="1459283980000" expanded="true" signature="27:102" placeholder="..." />
+            <marker date="1459283980000" expanded="true" signature="123:154" placeholder="{...}" />
+            <marker date="1459283980000" expanded="true" signature="293:412" placeholder="{...}" />
+            <marker date="1459283980000" expanded="true" signature="360:394" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/api/_indexHandler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5643204">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1459284031000" expanded="true" signature="20:123" placeholder="..." />
+            <marker date="1459284031000" expanded="true" signature="826:1057" placeholder="/.../" />
+            <marker date="1459284031000" expanded="true" signature="1730:1807" placeholder="/.../" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/config/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28202116">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
-            <marker date="1459198391000" expanded="true" signature="0:73" placeholder="{&quot;example&quot;: &quot;value&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.33919597">
-            <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035252646">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1459198554000" expanded="true" signature="0:636" placeholder="{&quot;name&quot;: &quot;generator-gorest&quot;...}" />
-            <marker date="1459198554000" expanded="true" signature="227:302" placeholder="[...]" />
-            <marker date="1459198554000" expanded="true" signature="322:520" placeholder="{&quot;URIjs&quot;: &quot;~1.11.2&quot;...}" />
-            <marker date="1459198554000" expanded="true" signature="535:598" placeholder="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/api/_indexHandler_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.091019414">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="41" />
-          <folding>
-            <marker date="1459195605000" expanded="true" signature="25:223" placeholder="..." />
-            <marker date="1459195605000" expanded="true" signature="301:992" placeholder="{...}" />
-            <marker date="1459195605000" expanded="true" signature="853:916" placeholder="{...}" />
-            <marker date="1459195605000" expanded="true" signature="922:989" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71797884">
-          <caret line="213" column="48" selection-start-line="213" selection-start-column="48" selection-end-line="213" selection-end-column="48" />
-          <folding>
-            <marker date="1459203569000" expanded="true" signature="372:6225" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="401:642" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="472:636" placeholder="{&quot;required&quot;: false...}" />
-            <marker date="1459203569000" expanded="true" signature="673:888" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="904:2524" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="930:2520" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="1178:2227" placeholder="[...]" />
-            <marker date="1459203569000" expanded="true" signature="1179:1344" placeholder="{&quot;name&quot;: 'baseName'...}" />
-            <marker date="1459203569000" expanded="true" signature="1354:1621" placeholder="{&quot;name&quot;: 'basePackage'...}" />
-            <marker date="1459203569000" expanded="true" signature="1629:1805" placeholder="{&quot;name&quot;: 'prometheus'...}" />
-            <marker date="1459203569000" expanded="true" signature="1815:2017" placeholder="{&quot;name&quot;: 'stomp'...}" />
-            <marker date="1459203569000" expanded="true" signature="2027:2226" placeholder="{&quot;name&quot;: 'database'...}" />
-            <marker date="1459203569000" expanded="true" signature="2274:2501" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="2538:6223" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="2561:6219" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="2943:3118" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="3756:3818" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="3849:4763" placeholder="{...}" />
-            <marker date="1459203569000" expanded="true" signature="4794:4964" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28202116">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <marker date="1459203895000" expanded="true" signature="32:282" placeholder="mongo:" />
-            <marker date="1459203895000" expanded="true" signature="82:113" placeholder="volumes:" />
-            <marker date="1459203895000" expanded="true" signature="116:142" placeholder="ports:" />
-            <marker date="1459203895000" expanded="true" signature="145:241" placeholder="environment:" />
-            <marker date="1459203895000" expanded="true" signature="343:648" placeholder="ports:" />
-            <marker date="1459203895000" expanded="true" signature="370:525" placeholder="environment:" />
-            <marker date="1459203895000" expanded="true" signature="680:848" placeholder="activemq:" />
-            <marker date="1459203895000" expanded="true" signature="738:764" placeholder="ports:" />
-            <marker date="1459203895000" expanded="true" signature="767:848" placeholder="environment:" />
+            <marker date="1459285058000" expanded="true" signature="0:73" placeholder="{&quot;example&quot;: &quot;value&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -940,6 +991,94 @@
           <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19388954">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding>
+            <marker date="1459285580000" expanded="true" signature="0:692" placeholder="{&quot;name&quot;: &quot;generator-gorest&quot;...}" />
+            <marker date="1459285580000" expanded="true" signature="283:358" placeholder="[...]" />
+            <marker date="1459285580000" expanded="true" signature="378:576" placeholder="{&quot;URIjs&quot;: &quot;~1.11.2&quot;...}" />
+            <marker date="1459285580000" expanded="true" signature="591:654" placeholder="{&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2773208">
+          <caret line="103" column="23" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+          <folding>
+            <marker date="1459285929000" expanded="true" signature="372:6286" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="401:642" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="472:636" placeholder="{&quot;required&quot;: false...}" />
+            <marker date="1459285929000" expanded="true" signature="673:888" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="904:2524" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="930:2520" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="1178:2227" placeholder="[...]" />
+            <marker date="1459285929000" expanded="true" signature="1179:1344" placeholder="{&quot;name&quot;: 'baseName'...}" />
+            <marker date="1459285929000" expanded="true" signature="1354:1621" placeholder="{&quot;name&quot;: 'basePackage'...}" />
+            <marker date="1459285929000" expanded="true" signature="1629:1805" placeholder="{&quot;name&quot;: 'prometheus'...}" />
+            <marker date="1459285929000" expanded="true" signature="1815:2017" placeholder="{&quot;name&quot;: 'stomp'...}" />
+            <marker date="1459285929000" expanded="true" signature="2027:2226" placeholder="{&quot;name&quot;: 'database'...}" />
+            <marker date="1459285929000" expanded="true" signature="2274:2501" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="2538:6284" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="2561:6280" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="2943:3118" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="3756:3818" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="3849:4763" placeholder="{...}" />
+            <marker date="1459285929000" expanded="true" signature="4794:4964" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21151586">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <marker date="1459286386000" expanded="true" signature="32:279" placeholder="mongo:" />
+            <marker date="1459286386000" expanded="true" signature="82:113" placeholder="volumes:" />
+            <marker date="1459286386000" expanded="true" signature="116:142" placeholder="ports:" />
+            <marker date="1459286386000" expanded="true" signature="145:241" placeholder="environment:" />
+            <marker date="1459286386000" expanded="true" signature="340:857" placeholder="ports:" />
+            <marker date="1459286386000" expanded="true" signature="657:722" placeholder="..." />
+            <marker date="1459286386000" expanded="true" signature="736:743" placeholder="..." />
+            <marker date="1459286386000" expanded="true" signature="889:1057" placeholder="activemq:" />
+            <marker date="1459286386000" expanded="true" signature="947:973" placeholder="ports:" />
+            <marker date="1459286386000" expanded="true" signature="976:1057" placeholder="environment:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.6218593">
+            <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

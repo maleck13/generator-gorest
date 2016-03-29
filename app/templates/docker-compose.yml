@@ -10,20 +10,23 @@ mongo:
     - MONGODB_DATABASE=mydatabase
     - MONGODB_USER=user
     - MONGODB_PASS=mypass
-  command: mongod --smallfiles
+  command: run --smallfiles
   <% } %>
 <%=baseName %>:
   restart: always
   image: <%=baseName %>
   ports:
-    - "3000:3000"
-  environment:
+    - "3000:3000"<% if('mongo' == database || 'yes' == messaging ){ %>
+  environment:<% if('mongo' == database ){ %>
     - MONGODB_DATABASE=mydatabase
     - MONGODB_USER=user
-    - MONGODB_PASS=mypass
+    - MONGODB_PASS=mypass <% } %><% if('yes' == messaging) { %>
     - MESSAGING_LOGIN=admin
-    - MESSAGING_PASSWORD=admin
+    - MESSAGING_PASSWORD=admin <% } %>
+    <% } %>
+    <% if('mongo' == database || 'yes' == messaging ){ %>
   links:
+    <% } %>
   <% if('mongo' == database ){ %>
     - mongo
   <% } %>

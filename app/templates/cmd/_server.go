@@ -6,7 +6,7 @@ import (
 	"github.com/codegangsta/cli"
 	"<%=basePackage %>/<%=baseName %>/api"
 	"<%=basePackage %>/<%=baseName %>/config"
-       <% if(database !== 'no'){ %>
+       <% if(database !== 'no' || 'yes' === messaging){ %>
 	"<%=basePackage %>/<%=baseName %>/data"
        <% } %>
 	"net/http"
@@ -40,6 +40,7 @@ func ServeCommand() cli.Command {
 
 func serve(context *cli.Context) {
 	config.SetGlobalConfig(configPath)
+	logrus.SetFormatter(&logrus.JSONFormatter{})
 	<% if(database == 'mongo'){ %>
 	data.InitMongo()
         defer data.DestroyMongo()
