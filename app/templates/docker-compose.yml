@@ -10,7 +10,7 @@ mongo:
     - MONGODB_DATABASE=mydatabase
     - MONGODB_USER=user
     - MONGODB_PASS=mypass
-  command: run --smallfiles
+  command: /run.sh --smallfiles
   <% } %>
 <%=baseName %>:
   restart: always
