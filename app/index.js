@@ -7,8 +7,15 @@ var util       = require('util'),
     _s         = require('underscore.string'),
     pluralize  = require('pluralize'),
     asciify    = require('asciify'),
-    mkdir      = require('fs').mkdirSync;
+    mkdir      = require('fs').mkdirSync,
+    exists     = require('fs').existsSync;
 
+
+function mkdirIfNotExists(path){
+  if (! exists(path)){
+    mkdir(path)
+  }
+}
 
 module.exports = generators.Base.extend({
   constructor: function () {
@@ -97,11 +104,11 @@ module.exports = generators.Base.extend({
 
       this.copy('gitignore', '.gitignore');
 
-      mkdir(cmdDir);
-      mkdir(configDir);
-      mkdir(apiDir);
-      mkdir(apiMW);
-      mkdir(domainDir);
+      mkdirIfNotExists(cmdDir);
+      mkdirIfNotExists(configDir);
+      mkdirIfNotExists(apiDir);
+      mkdirIfNotExists(apiMW);
+      mkdirIfNotExists(domainDir);
 
       var commonTemplateVals = {
         basePackage: this.basePackage,
@@ -133,8 +140,8 @@ module.exports = generators.Base.extend({
       );
 
       if("no" !== database){
-        mkdir("data/");
-        mkdir("data/model");
+        mkdirIfNotExists("data/");
+        mkdirIfNotExists("data/model");
       }
 
       if("mongo" == database){

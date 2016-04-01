@@ -74,6 +74,11 @@ func IndexMongo(rw http.ResponseWriter, req *http.Request)HttpError{
 func IndexStomp(rw http.ResponseWriter, req *http.Request)HttpError{
 	resData := make(map[string]string)
 	resData["example"] = config.Conf.GetExample()
+	//set up a subscriber
+	data.Subscribe("test","test",func(msg stompngo.MessageData){
+		logrus.Info("handling msg ", msg)
+	},nil)
+	//publish some messages
 	for i :=0; i < 10; i++ {
 		data.Publish("test", "test",resData, nil)
 	}
