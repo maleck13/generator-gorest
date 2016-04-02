@@ -1,6 +1,6 @@
 {
   "name": "generator-gorest",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "yeoman generator for creating a ready rest api. gorilla mux for routing, logrus for logging , negroni for middleware. Comes with options for mongodb and stomp for messaging. Has ready dockerfile and docker compose config",
   "main": "index.js",
   "keywords": [
