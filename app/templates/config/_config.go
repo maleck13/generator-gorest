@@ -34,6 +34,8 @@ type config struct {
 	<% } %>
 }
 
+<% if(messaging == 'yes'){ %>
+
 type Stomp_config struct {
 Host string `json:"host"`
 Port string  `json:"port"`
@@ -43,6 +45,8 @@ Pass string `json:"pass"`
 Vhost string `json:"vhost"`
 
 }
+
+<% }  %>
 
 func (c *config) GetExample()string{
   return c.Example
