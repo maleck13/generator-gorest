@@ -226,6 +226,8 @@ module.exports = generators.Base.extend({
       this.template('api/_errors.go', 'api/errors.go');
       this.template('api/_healthHandler.go', 'api/healthHandler.go');
       this.template('api/middleware/_example.go','api/middleware/example.go');
+      this.template('api/middleware/_cors.go','api/middleware/cors.go',commonTemplateVals);
+      this.template('api/middleware/_cors_test.go','api/middleware/cors_test.go',commonTemplateVals);
       this.template('README.md', 'README.md');
     }
   }
