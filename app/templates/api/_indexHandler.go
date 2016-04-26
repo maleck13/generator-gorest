@@ -12,6 +12,10 @@ import (
 	"<%=basePackage %>/<%=baseName %>/data/model"
 	"<%=basePackage %>/<%=baseName %>/domain"
 	<% } %>
+	<% if( "yes" == messaging) { %>
+	"github.com/maleck13/stompy"
+	"github.com/Sirupsen/logrus"
+	<% } %>
 )
 
 //Example route handler
@@ -74,11 +78,24 @@ func IndexMongo(rw http.ResponseWriter, req *http.Request)HttpError{
 func IndexStomp(rw http.ResponseWriter, req *http.Request)HttpError{
 	resData := make(map[string]string)
 	resData["example"] = config.Conf.GetExample()
-	//set up a subscriber
-	data.Subscribe("test","test",func(msg stompngo.MessageData){
-		logrus.Info("handling msg ", msg)
+
+	data.Subscribe("test","test",func(msg stompy.Frame){
+		jsonData := make(map[string]string)
+		if err := json.Unmarshal(msg.Body,&jsonData); err != nil{
+			logrus.Error("failed to unmarshal msg ", err.Error())
+		}
+		logrus.Info("handling msg 1: ", jsonData)
+
 	},nil)
-	//publish some messages
+
+	data.Subscribe("test","test",func(msg stompy.Frame){
+		jsonData := make(map[string]string)
+		if err := json.Unmarshal(msg.Body,&jsonData); err != nil{
+			logrus.Error("failed to unmarshal msg ", err.Error())
+		}
+		logrus.Info("handling msg 2: ", jsonData)
+	},nil)
+
 	for i :=0; i < 10; i++ {
 		data.Publish("test", "test",resData, nil)
 	}
