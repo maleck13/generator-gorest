@@ -23,7 +23,9 @@ func NewRouter() http.Handler {
 	//add middleware for all routes
 	n := negroni.New(recovery)
 	//add some top level routes
+<% if("yes" === metrics) { %>
 	r.Handle("/metrics",prometheus.Handler())
+<% } %>
 	r.HandleFunc("/sys/info/health",RouteErrorHandler(HealthHandler))
 	r.HandleFunc("/sys/info/ping",RouteErrorHandler(Ping))
 
