@@ -54,11 +54,16 @@ func Subscribe(queue, topic string ,handler stompy.SubscriptionHandler, opts sto
 func Publish(queue, topic string , jsonData interface{} , opts stompy.StompHeaders)error{
 	destination := queue + "/" + topic
 	data,err:=json.Marshal(jsonData)
+	opts["content-type"] = "application/json"
 	if err != nil{
 		return err
 	}
-	if err := stompClient.Publish(destination,"application/json",data,opts,nil); err != nil{
+	if err := stompClient.Publish(destination,data,opts,nil); err != nil{
 		return err
 	}
 	return nil
+}
+
+func StompClient()stompy.StompClient{
+	return stompClient
 }
